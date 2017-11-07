@@ -1,0 +1,29 @@
+<project name="Santander Build Script" default="all" basedir=".">
+	
+	<target name="all" depends="init, compile, package, deploy">
+		<echo message="Build ${buildDefinitionId} completed." />
+	</target>
+
+	<target name="init">
+		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
+		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
+		<echo message="Jenkins BUILD_URL: ${BUILD_URL}"/>
+		<echo message="Jenkins BUILD_TAG: ${BUILD_TAG}"/>
+	</target>
+	
+	<target name="compile">
+	</target>
+
+	<target name="compile">
+	</target>
+
+	<target name="package">
+	</target>
+				
+	<target name="deploy">
+		<copy todir="${ARCHIVE_DIR}">
+			<fileset file="../index.html" />
+	    </copy>
+	</target>
+	
+</project>
