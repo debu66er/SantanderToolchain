@@ -5,6 +5,7 @@
 	</target>
 
 	<target name="init">
+		<echo message="Bluemix ARCHIVE_DIR: ${ARCHIVE_DIR}"/>
 		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
 		<echo message="Jenkins BUILD_URL: ${BUILD_URL}"/>
