@@ -7,7 +7,7 @@
 	<target name="init">
 		<property name="${property.file}" value="${ARCHIVE_DIR}"/>
 		<echo message="Bluemix ARCHIVE_DIR: ${property.file}"/>
-		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
+		<echo>${BUILD_NUMBER}</echo>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
 		<echo message="Jenkins BUILD_URL: ${BUILD_URL}"/>
 		<echo message="Jenkins BUILD_TAG: ${BUILD_TAG}"/>
@@ -29,11 +29,11 @@
 	</target>
 				
 	<target name="deploy">
-		<!--
 		<copy todir="${ARCHIVE_DIR}">
 			<fileset file="../index.html" />
+						<fileset file="../output.txt" />
+						<fileset file="../my.properties" />
 	    </copy>
-	    -->
 	</target>
 	
 </project>
