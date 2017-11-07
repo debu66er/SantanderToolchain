@@ -5,15 +5,11 @@
 	</target>
 
 	<target name="init">
-		<echo message="Bluemix ARCHIVE_DIR: ${ARCHIVE_DIR}"/>
+	<!--
 		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
-		<echo message="Jenkins BUILD_URL: ${BUILD_URL}"/>
-		<echo message="Jenkins BUILD_TAG: ${BUILD_TAG}"/>
-		
-		<echo file="output.txt" append="true">
-   abc=${ARCHIVE_DIR}
-</echo>
+	-->
+		<echo file="BUILD_NUMBER.txt" append="true">${BUILD_NUMBER}</echo>
 	</target>
 	
 	<target name="compile">
@@ -25,7 +21,7 @@
 	<target name="deploy">
 		<copy todir="${ARCHIVE_DIR}">
 			<fileset file="../index.html" />
-			<fileset file="../output.txt" />
+			<fileset file="../BUILD_NUMBER.txt" />
 	    </copy>
 	</target>
 	
