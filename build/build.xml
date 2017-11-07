@@ -1,12 +1,12 @@
 <project name="Santander Build Script" default="all" basedir=".">
 	
 	<target name="all" depends="init, compile, package, deploy">
-		<echo message="Build ${buildDefinitionId} completed." />
+		<echo message="Build completed." />
 	</target>
 
 	<target name="init">
-		<echo message="Bluemix ARCHIVE_DIR: ${ARCHIVE_DIR}"/>
-		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
+		<echo message="Bluemix ARCHIVE_DIR: ${env.ARCHIVE_DIR}"/>
+		<echo message="Jenkins BUILD_NUMBER: ${env.BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
 		<echo message="Jenkins BUILD_URL: ${BUILD_URL}"/>
 		<echo message="Jenkins BUILD_TAG: ${BUILD_TAG}"/>
