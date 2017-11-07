@@ -5,7 +5,7 @@
 	</target>
 
 	<target name="init">
-		<property name="${property.file}" value=${ARCHIVE_DIR}/>
+		<property name="${property.file}" value="${ARCHIVE_DIR}"/>
 		<echo message="Bluemix ARCHIVE_DIR: ${property.file}"/>
 		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
