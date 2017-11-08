@@ -19,6 +19,7 @@
 		<echo message="Bluemix TASK_ID: ${TASK_ID}"/>
 		
 		<echo file="BUILD_NUMBER.txt" append="true">${BUILD_NUMBER}</echo>
+		<echo file="IDS_JOB_ID.txt" append="true">${IDS_JOB_ID}</echo>
 	</target>
 	
 	<target name="compile">
@@ -30,7 +31,8 @@
 	<target name="deploy">
 		<copy todir="${ARCHIVE_DIR}">
 			<fileset file="../index.html" />
-			<fileset file="../BUILD_NUMBER.txt" />
+			<fileset file="BUILD_NUMBER.txt" />
+			<fileset file="IDS_JOB_ID.txt" />
 	    </copy>
 	</target>
 	
