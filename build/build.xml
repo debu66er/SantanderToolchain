@@ -5,9 +5,7 @@
 	</target>
 
 	<target name="init">
-	<property environment="env"/>
-	<echo message="Bluemix WORKSPACE: ${env.WORKSPACE}"/>
-	
+		<property environment="env"/>
 		<echo message="Jenkins BUILD_NUMBER: ${env.BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${env.BUILD_ID}"/>
 		<echo message="Bluemix IDS_JOB_ID: ${env.IDS_JOB_ID}"/>
@@ -23,7 +21,6 @@
 		<echo message="Bluemix PIPELINE_STAGE_ID: ${env.PIPELINE_STAGE_ID}"/>
 		
 		<echo file="BUILD_NUMBER.txt" append="true">${env.BUILD_NUMBER}</echo>
-		<echo file="IDS_JOB_ID.txt" append="true">${env.IDS_JOB_ID}</echo>
 		<echo file="BUILD_URL.txt" append="true">${env.IDS_URL}/${env.PIPELINE_ID}/${env.PIPELINE_STAGE_ID}/${env.IDS_JOB_ID}</echo>
 	</target>
 	
@@ -37,7 +34,6 @@
 		<copy todir="${env.ARCHIVE_DIR}">
 			<fileset file="../index.html" />
 			<fileset file="BUILD_NUMBER.txt" />
-			<fileset file="IDS_JOB_ID.txt" />
 			<fileset file="BUILD_URL.txt" />
 	    </copy>
 	</target>
