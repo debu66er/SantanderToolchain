@@ -5,6 +5,9 @@
 	</target>
 
 	<target name="init">
+	<property environment="env"/>
+	<echo message="Bluemix WORKSPACE: ${env.WORKSPACE}"/>
+	
 		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
 		<echo message="Bluemix IDS_JOB_ID: ${IDS_JOB_ID}"/>
