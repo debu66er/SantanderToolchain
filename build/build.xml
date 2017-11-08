@@ -15,7 +15,9 @@
 		<echo message="Bluemix IDS_URL: ${IDS_URL}"/>
 		<echo message="Bluemix IDS_VERSION: ${IDS_VERSION}"/>
 
-	
+		<echo message="Bluemix PIPELINE_INITIAL_STAGE_EXECUTION_ID: ${PIPELINE_INITIAL_STAGE_EXECUTION_ID}"/>
+		<echo message="Bluemix TASK_ID: ${TASK_ID}"/>
+		
 		<echo file="BUILD_NUMBER.txt" append="true">${BUILD_NUMBER}</echo>
 	</target>
 	
