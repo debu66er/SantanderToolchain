@@ -8,22 +8,22 @@
 	<property environment="env"/>
 	<echo message="Bluemix WORKSPACE: ${env.WORKSPACE}"/>
 	
-		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
-		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
-		<echo message="Bluemix IDS_JOB_ID: ${IDS_JOB_ID}"/>
-		<echo message="Bluemix IDS_JOB_NAME: ${IDS_JOB_NAME}"/>
-		<echo message="Bluemix IDS_OUTPUT_PROPS: ${IDS_OUTPUT_PROPS}"/>	
-		<echo message="Bluemix IDS_PROJECT_NAME: ${IDS_PROJECT_NAME}"/>
-		<echo message="Bluemix IDS_STAGE_NAME: ${IDS_STAGE_NAME}"/>
-		<echo message="Bluemix IDS_URL: ${IDS_URL}"/>
+		<echo message="Jenkins BUILD_NUMBER: ${env.BUILD_NUMBER}"/>
+		<echo message="Jenkins BUILD_ID: ${env.BUILD_ID}"/>
+		<echo message="Bluemix IDS_JOB_ID: ${env.IDS_JOB_ID}"/>
+		<echo message="Bluemix IDS_JOB_NAME: ${env.IDS_JOB_NAME}"/>
+		<echo message="Bluemix IDS_OUTPUT_PROPS: ${env.IDS_OUTPUT_PROPS}"/>	
+		<echo message="Bluemix IDS_PROJECT_NAME: ${env.IDS_PROJECT_NAME}"/>
+		<echo message="Bluemix IDS_STAGE_NAME: ${env.IDS_STAGE_NAME}"/>
+		<echo message="Bluemix IDS_URL: ${env.IDS_URL}"/>
 		<echo message="Bluemix IDS_VERSION: ${IDS_VERSION}"/>
-		<echo message="Bluemix PIPELINE_INITIAL_STAGE_EXECUTION_ID: ${PIPELINE_INITIAL_STAGE_EXECUTION_ID}"/>
-		<echo message="Bluemix TASK_ID: ${TASK_ID}"/>
-		<echo message="Bluemix PIPELINE_ID: ${PIPELINE_ID}"/>
-		<echo message="Bluemix PIPELINE_STAGE_ID: ${PIPELINE_STAGE_ID}"/>
+		<echo message="Bluemix PIPELINE_INITIAL_STAGE_EXECUTION_ID: ${env.PIPELINE_INITIAL_STAGE_EXECUTION_ID}"/>
+		<echo message="Bluemix TASK_ID: ${env.TASK_ID}"/>
+		<echo message="Bluemix PIPELINE_ID: ${env.PIPELINE_ID}"/>
+		<echo message="Bluemix PIPELINE_STAGE_ID: ${env.PIPELINE_STAGE_ID}"/>
 		
-		<echo file="BUILD_NUMBER.txt" append="true">${BUILD_NUMBER}</echo>
-		<echo file="IDS_JOB_ID.txt" append="true">${IDS_JOB_ID}</echo>
+		<echo file="BUILD_NUMBER.txt" append="true">${env.BUILD_NUMBER}</echo>
+		<echo file="IDS_JOB_ID.txt" append="true">${env.IDS_JOB_ID}</echo>
 	</target>
 	
 	<target name="compile">
@@ -33,7 +33,7 @@
 	</target>
 				
 	<target name="deploy">
-		<copy todir="${ARCHIVE_DIR}">
+		<copy todir="${env.ARCHIVE_DIR}">
 			<fileset file="../index.html" />
 			<fileset file="BUILD_NUMBER.txt" />
 			<fileset file="IDS_JOB_ID.txt" />
