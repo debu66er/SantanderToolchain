@@ -5,10 +5,8 @@
 	</target>
 
 	<target name="init">
-	<!--
 		<echo message="Jenkins BUILD_NUMBER: ${BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${BUILD_ID}"/>
-	-->
 		<echo message="Bluemix IDS_JOB_ID: ${IDS_JOB_ID}"/>
 		<echo message="Bluemix IDS_JOB_NAME: ${IDS_JOB_NAME}"/>
 		<echo message="Bluemix IDS_OUTPUT_PROPS: ${IDS_OUTPUT_PROPS}"/>	
