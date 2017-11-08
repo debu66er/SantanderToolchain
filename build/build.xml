@@ -24,7 +24,7 @@
 		
 		<echo file="BUILD_NUMBER.txt" append="true">${env.BUILD_NUMBER}</echo>
 		<echo file="IDS_JOB_ID.txt" append="true">${env.IDS_JOB_ID}</echo>
-		<echo file="BUILD_URL.txt" append="true">${env.IDS_URL}/${PIPELINE_ID}/${PIPELINE_STAGE_ID}/${env.IDS_JOB_ID}</echo>
+		<echo file="BUILD_URL.txt" append="true">${env.IDS_URL}/${env.PIPELINE_ID}/${env.PIPELINE_STAGE_ID}/${env.IDS_JOB_ID}</echo>
 	</target>
 	
 	<target name="compile">
