@@ -14,9 +14,10 @@
 		<echo message="Bluemix IDS_STAGE_NAME: ${IDS_STAGE_NAME}"/>
 		<echo message="Bluemix IDS_URL: ${IDS_URL}"/>
 		<echo message="Bluemix IDS_VERSION: ${IDS_VERSION}"/>
-
 		<echo message="Bluemix PIPELINE_INITIAL_STAGE_EXECUTION_ID: ${PIPELINE_INITIAL_STAGE_EXECUTION_ID}"/>
 		<echo message="Bluemix TASK_ID: ${TASK_ID}"/>
+		<echo message="Bluemix PIPELINE_ID: ${PIPELINE_ID}"/>
+		<echo message="Bluemix PIPELINE_STAGE_ID: ${PIPELINE_STAGE_ID}"/>
 		
 		<echo file="BUILD_NUMBER.txt" append="true">${BUILD_NUMBER}</echo>
 		<echo file="IDS_JOB_ID.txt" append="true">${IDS_JOB_ID}</echo>
