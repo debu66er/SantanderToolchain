@@ -6,6 +6,9 @@
 
 	<target name="init">
 		<property environment="env"/>
+		
+		<echo message="Toolchain Environment Variables: ${env}"/>
+		
 		<echo message="Jenkins BUILD_NUMBER: ${env.BUILD_NUMBER}"/>
 		<echo message="Jenkins BUILD_ID: ${env.BUILD_ID}"/>
 		<echo message="Bluemix IDS_JOB_ID: ${env.IDS_JOB_ID}"/>
